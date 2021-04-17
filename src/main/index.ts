@@ -27,7 +27,7 @@ class createWin {
   // 创建浏览器窗口
   constructor () {
     win = new BrowserWindow({
-      width: 330,
+      width: 500,
       height: 700,
       webPreferences: {
         nodeIntegration: true,
