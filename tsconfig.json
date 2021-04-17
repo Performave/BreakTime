@@ -10,7 +10,7 @@
     "baseUrl": "./",
     "strict": true,
     "paths": {
-      "@/*": ["src/render/*", "src/main/*"],
+      "@/*": ["src/render/*"],
       "root/*": ["/*"]
     },
     "allowSyntheticDefaultImports": true

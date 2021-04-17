@@ -1,26 +1,17 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Index from './views/Index.vue'
-import Create from './views/Create.vue'
-const router:any = createRouter({
-  history: createWebHashHistory(),
-  routes: [
-    {
-        path: '/',
-        name: 'index',
-        component: Index as any,
-        meta: {
-            title: '首页'
-        }
-    },
-    {
-        path: '/create',
-        name: 'create',
-        component: Create as any,
-        meta: {
-            title: '创建'
-        }
-    }
-  ]
-})
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from './views/Home.vue';
 
-export default router
+const routes: Array<RouteRecordRaw> = [
+  {
+    name: 'Home',
+    path: '/',
+    component: Home,
+  },
+];
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
+
+export default router;
