@@ -6,7 +6,7 @@
         v-for="index in 36"
         :style="{
           transform:
-            'translateY(-5px) rotate(calc(' + index + ' * 10deg))',
+            'rotate(calc(' + index + ' * 10deg))',
         }"
         :key="index"
       >
@@ -33,12 +33,12 @@ export default defineComponent({
 
 <style scoped>
 .bg-container {
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 360px;
 }
 
 .box {
-  width: 400px;
+  width: 360px;
   height: 6px;
   position: absolute;
   top: 50%;
@@ -47,7 +47,7 @@ export default defineComponent({
 .box span {
   background: #e55a70;
   display: block;
-  width: 80px;
+  width: 70px;
   height: 6px;
 }
 </style>
