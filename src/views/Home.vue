@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center w-full h-full absolute">
+  <div class="grid place-items-center w-full h-full absolute">
     <div class="bg-container">
       <div
         class="absolute box"
