@@ -3,16 +3,17 @@
     <div class="grid place-items-center w-full h-96 absolute">
       <div class="bg-container">
         <div
-          class="absolute box"
+          class="absolute box animate-protrude"
           v-for="index in 36"
           :style="{
-            transform: 'rotate(calc(' + index + ' * 10deg))',
+            transform: 'rotate(calc(' + index + ' * 10deg + 80deg))', //I added 80deg because the HSL (orange -> pink) started at -90 degrees for some odd reason >:(
+            'animation-delay': 'calc('+ index +' *17ms + 200ms)'
           }"
           :key="index"
         >
           <span
             class="rounded-full"
-            :style="{ filter: 'hue-rotate(calc(' + index + ' *.5deg))' }"
+            :style="{ filter: 'hue-rotate(calc(' + index + ' * -2deg))' }"
           ></span>
         </div>
       </div>
@@ -50,5 +51,18 @@ export default defineComponent({
   display: block;
   width: 70px;
   height: 6px;
+}
+
+.animate-protrude {
+    animation: protrude 0.25s ease-out;
+}
+
+@keyframes protrude {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
