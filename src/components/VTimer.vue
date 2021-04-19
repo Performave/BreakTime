@@ -55,13 +55,14 @@ export default defineComponent({
 
 .animate-protrude {
     animation: protrude 0.25s ease-out;
+    animation-fill-mode: both;
 }
 
 @keyframes protrude {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
