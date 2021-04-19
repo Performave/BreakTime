@@ -18,12 +18,15 @@ async function createWindow() {
     minWidth: 460,
     minHeight: 680,
     backgroundColor: '#404364',
+    frame: false,
+    titleBarStyle: "hidden",
     webPreferences: {
       
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
-      nodeIntegration: (process.env
-          .ELECTRON_NODE_INTEGRATION as unknown) as boolean
+      enableRemoteModule: true,
+      nodeIntegration: true,
+      contextIsolation: false 
     }
   })
 
