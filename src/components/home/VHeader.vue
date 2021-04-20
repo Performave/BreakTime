@@ -22,7 +22,7 @@
       <h1 class="text-xl muted-title">BreakTime</h1>
     </div>
     <div class="flex justify-end w-1/3">
-      <a>
+      <router-link :to="{ name: 'Settings' }">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-7 w-7 muted-title"
@@ -43,7 +43,7 @@
             d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
           />
         </svg>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
