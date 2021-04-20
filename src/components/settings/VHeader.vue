@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center h-24 mb-5 px-10">
+  <div class="flex items-center h-24 px-10">
     <div class="flex justify-left w-1/3">
       <router-link :to="{ name: 'Home' }" >
         <svg
