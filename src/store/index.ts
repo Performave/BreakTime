@@ -1,23 +1,11 @@
 import { createStore } from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
-import createPersistedState from "vuex-persistedstate"
-
-interface DefaultStore {
-  count: number
-}
+import timer from '@/store/modules/timer'
 
 export default createStore({
-  state(): DefaultStore {
-    return {
-      count: 0,
-    }
+  modules: {
+    timer
   },
-  mutations: {
-    increment(state: DefaultStore) {
-      state.count++
-    },
-  },
-  actions: {},
-  modules: {},
   plugins: [createPersistedState()],
 })
